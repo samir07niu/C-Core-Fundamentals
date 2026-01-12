@@ -1,24 +1,54 @@
+/*
+ * Module: Student Record Keeper (Structs)
+ * Author: Samir Raja
+ * Description: Implements Structure Data Types to manage student metadata.
+ */
+
 #include <stdio.h>
-struct student{
+
+struct Student {
     char name[50];
+    char city[20];
+    char contact[40];
+    char course[60];
     int roll;
     float marks;
-
 };
-int main(){
-    struct student s;
-    printf("enter name:");
-    scanf("%s", &s.name);
+
+int main() {
+    struct Student s;
+
+    printf("\n--- [ NEW STUDENT ENTRY ] ---\n");
     
-    printf("enter roll number:");
+    printf("[?] Enter Name: ");
+    scanf("%s", s.name);
+    
+    printf("[?] Enter Roll Number: ");
     scanf("%d", &s.roll);
 
-    printf("enter marks:");
+    printf("[?] Enter Marks: ");
     scanf("%f", &s.marks);
     
-    printf("\n---student details---\n");
-    printf("name:%s\n",s.name);
-    printf("roll:%d\n",s.roll);
-    printf("marks:%2f\n",s.marks);
+    printf("[?] Enter City: ");
+    scanf("%s", s.city);
+    
+    printf("[?] Enter Contact: ");
+    scanf("%s", s.contact);
+    
+    printf("[?] Enter Course: ");
+    scanf("%s", s.course);
+    
+    // --- DISPLAY OUPUT ---
+    printf("\n=============================\n");
+    printf("      DATABASE RECORD        \n");
+    printf("=============================\n");
+    printf(" Name    : %s\n", s.name);
+    printf(" ID/Roll : %d\n", s.roll);
+    printf(" Course  : %s\n", s.course);
+    printf(" City    : %s\n", s.city);
+    printf(" Contact : %s\n", s.contact);
+    printf(" GPA/Marks: %.2f\n", s.marks);
+    printf("=============================\n");
+
     return 0;
 }
