@@ -1,5 +1,5 @@
 /*
- * Module: Student Record Keeper (Structs)
+ * Module: Student Record Keeper (Struct)
  * Author: Samir Raja
  * Description: Implements Structure Data Types to manage student metadata.
  */
@@ -52,3 +52,4 @@ int main() {
 
     return 0;
 }
+
